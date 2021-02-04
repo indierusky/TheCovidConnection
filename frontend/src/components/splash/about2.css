@@ -1,0 +1,79 @@
+.about {
+    text-align: center;
+    background-color: teal;
+    width: 100%;
+    height: 100%;
+}
+
+.about-people {
+    display: flex;
+    justify-content: center;
+}
+
+.person-div {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.map-button {
+    width: 300px;
+    font-family: 'Robot', sans-serif;
+    border-radius: 7px;
+    margin: 5px;
+}
+
+.map-button:hover{
+     background-image: none;
+     filter: brightness(85%);
+    }
+
+.map-div {
+    background-color: teal;
+}
+
+.link-image {
+    height: 70px;
+    width: 100px;
+    margin: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.link-text-image {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.user-search-bar {
+    color: white;
+    width: 300px;
+    height: 27px;
+    text-align: center;
+    background-color:  #001f3f;
+    margin-bottom: 10px;
+}
+
+.map-search {
+    display: flex;
+    align-items: baseline;
+}
+
+.input-search {
+    margin-left: 10px; 
+    border: none;
+    border-radius: 10px;
+}
+
+.input-search:hover{
+     background-image: none;
+     filter: brightness(85%);
+    }
+
+.login-links:visited {
+    text-decoration: none;
+    color: white;
+}

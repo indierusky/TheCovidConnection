@@ -1,0 +1,450 @@
+$icon-size    : 50px;
+$border-radius: 0.5;//15% = 0.15, 50% = 0.50 etc.
+
+$background   : #0052ae;
+$background-b : #2d2c3e;
+
+// Icon Colors
+$green        : #16A085;
+$red          : #C82647;
+$green-l      : #8CC63F;
+$orange       : #EB9532;
+$purple       : #7E3661;
+
+// Text
+$white      : #FFFFFF;
+
+header{
+  background: $background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  z-index: -1;
+  color: $white;
+}
+
+.navcontainer{
+  display: table;
+  height: $icon-size;
+  width: 100%;
+//   padding-bottom: 5vh;
+  margin: 0;
+  overflow: hidden;
+  
+  @media (max-width: 900px){
+  }
+  background: $background;
+  z-index: -1;
+//   justify-content: space-evenly;
+
+}
+
+.content{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+//   justify-content: space-evenly;
+//   margin-top:  500px;
+//   height: fit-content;
+}
+
+header{
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: $white;
+}
+
+.icon-container-splash{
+//   margin-top: 200px;
+display: flex;
+align-items: center;
+  width: 100%;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  margin-left: 0;
+//   position: fixed;
+  overflow: sticky;
+  margin-top: -8px;
+  padding-bottom: 5px;
+//   position: fixed;
+//   margin-top: $icon-size / 10;
+}
+
+.icon-splash{
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+  // margin-left: $icon-size * 6.25;
+  // margin-right: $icon-size* 6.25;
+//   margin-top: -150px;
+
+//    padding-left: 15px;
+//   padding-right: 15px;
+    
+//   margin-top: -40%;
+  border-radius: $icon-size*$border-radius *100;
+  overflow: visible;
+  &::before, &::after{
+    content: '';
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: $icon-size*$border-radius ;
+    color: $white;
+
+  }
+  i{
+    position: relative;
+    color: $white;
+    font-size: $icon-size;
+    margin-top: $icon-size;
+    transition: all 0.25s ease;
+    margin-top: 40px;
+  }
+}
+
+.icon-fill{
+  &::before{
+    transition-duration: 0.5s;
+    box-shadow: inset 0 0 0 1px $green;
+  }
+  &:hover::before{
+    box-shadow: inset 0 0 0 $icon-size $green;
+  }
+}
+
+
+
+.icon-expand{
+  &::after{
+    box-shadow: inset 0 0 0 1px $red;
+  }
+  &::before{
+    background: $red;
+    box-shadow: inset 0 0 0 $icon-size $background;
+  }
+  &:hover::before{
+    box-shadow: inset 0 0 0 1px $background;
+  }
+}
+
+
+
+
+.icon-link-splash{
+
+text-decoration: none;
+color: white;
+margin-left: 5%;
+margin-right: 5%;
+width: 10%;
+}
+
+
+.icon-link-splash:visited{
+
+text-decoration: none;
+color: white;
+
+}
+
+
+
+.fa-home{
+
+color: $white;
+margin-left: 13px;
+margin-top: 13px;
+z-index: 1000;
+opacity: .9;
+
+}
+
+
+.fa-newspaper{
+
+color: $white;
+margin-left: 13px;
+margin-top: 14px;
+z-index: 1000;
+opacity: .9;
+
+}
+
+
+.fa-user{
+
+color: $white;
+margin-left: 15px;
+margin-top: 14px;
+z-index: 1000;
+opacity: .9;
+
+}
+
+
+
+.fa-sign-out-alt{
+
+color: $white;
+margin-left: 15px;
+margin-top: 14px;
+z-index: 1000;
+opacity: .9;
+
+}
+
+.fa-plus{
+
+color: $white;
+margin-left: 15px;
+margin-top: 14px;
+z-index: 1000;
+opacity: .9;
+
+}
+
+
+
+
+.fa-user-plus {
+  color: $white;
+margin-left: 15px;
+margin-top: 14px;
+z-index: 1000;
+opacity: .9;
+}
+
+.fa-sign-in-alt {
+    color: $white;
+margin-left: 15px;
+margin-top: 14px;
+z-index: 1000;
+opacity: .9;
+}
+
+
+.splash-head{
+
+font-size: 24px;
+font-family: 'Josefin Sans', sans-serif;
+
+
+}
+
+
+  img.logo-img-nav{
+width: 50px;
+height: 50px;
+align-self: center;
+
+ }
+
+ .logo-img-sp{
+
+ height: 250px;
+ width: 250px;
+ margin-top: -100px;
+ margin-left: -20px;
+ }
+
+
+ .covid-corner{
+
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: -30px;
+
+ }
+
+
+ .news-splash{
+
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: -85px;
+
+ }
+
+
+.first-aid-sp{
+
+font-size: 28px;
+margin-top: 10px;
+margin-left: 10px;
+color: #FFFFFF;
+
+}
+
+
+ .profile-splash{
+
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: 305px;
+
+ }
+
+
+ .signup-splash{
+
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: 295px;
+
+ }
+
+
+ .signin-splash{
+
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: 1005px;
+
+ }
+
+
+i.fa-sign-in:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position: fixed;
+    top: 6%;
+    // left: 515px;
+    left: 28.3%;
+
+    width: 6em;
+    border: 5px solid #0cf;
+    background-color:#cff; 
+    text-align: center;
+    padding:10px;
+    overflow: hidden;
+  }
+
+
+i.fa-user-plus:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position: fixed;
+    top: 6%;
+    left: 48.5%;
+    width: 6em;
+    border: 5px solid #0cf;
+    background-color: #cff; 
+    text-align: center;
+    padding:10px;
+    // overflow: visible;
+    overflow: hidden;
+
+  }
+
+i.fa-sign-out-alt:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position: fixed;
+    top: 6%;
+    // left: 515px;
+    left: 28.3%;
+
+    width: 6em;
+    border: 5px solid #0cf;
+    background-color: #cff; 
+    text-align: center;
+    padding:10px;
+    overflow: hidden;
+  }
+
+  i.fa-sign-in-alt:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position: fixed;
+    top: 6%;
+    // left: 515px;
+    left: 28.3%;
+
+    width: 6em;
+    border: 5px solid #0cf;
+    background-color: #cff; 
+    text-align: center;
+    padding:10px;
+    overflow: hidden;
+  }
+
+
+   i.fa-sign-in:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position: fixed;
+    top: 6%;
+    // left: 515px;
+    left: 28.3%;
+
+    width: 6em;
+    border: 5px solid #0cf;
+    background-color:#cff; 
+    text-align: center;
+    padding:10px;
+    overflow: hidden;
+  }
+
+
+  i.fa-user-plus span{
+
+display: none;
+color: #172b4d; 
+}
+
+
+i.fa-sign-in-alt span{
+
+display: none;
+color: #172b4d; 
+
+}
+
+i.fa-sign-out-alt span{
+
+display: none;
+color: #172b4d; 
+
+}
+
+
+i.fa-sign-in span{
+
+display: none;
+color: #172b4d; 
+}
+
+
+ .logout-splash{
+
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: 995px;
+
+ }
+
+ .sp-title-header{
+
+  color: goldenrod;
+  font-weight: 900;
+
+ }
+
+ .newsfeed-aid{
+
+  margin-top: 5px;
+
+ }
+
+
+ .news-home{
+
+margin-top: 2%;
+margin-left: -4%;
+
+ }
