@@ -4,12 +4,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faCircle, faPlus, faBell, faNewspaper, faUser, faBars, faHandsHelping} from '@fortawesome/free-solid-svg-icons';
 
-// npm install --save-dev @iconify/react @iconify-icons/fluent
+// npm install --save @iconify/react @iconify-icons/fluent
 import { Icon, InlineIcon } from '@iconify/react';
 import signOut20Regular from '@iconify-icons/fluent/sign-out-20-regular';
-// npm install --save-dev @iconify/react @iconify-icons/fxemoji
+// npm install --save @iconify/react @iconify-icons/fxemoji
 import emailIcon from '@iconify-icons/fxemoji/email';
-// npm install --save-dev @iconify/react @iconify-icons/fa-solid
+// npm install --save @iconify/react @iconify-icons/fa-solid
 import firstAidLight from '@iconify-icons/ph/first-aid-light';
 
 

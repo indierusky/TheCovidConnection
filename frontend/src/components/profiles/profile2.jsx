@@ -6,10 +6,10 @@ import { faUser} from '@fortawesome/free-solid-svg-icons';
 import FavorsReducer from '../../reducers/favors_reducer';
 // import FavorItem from '../favors/favor_item';
 
-// npm install --save-dev @iconify/react @iconify-icons/jam
+// npm install --save @iconify/react @iconify-icons/jam
 // import { Icon, InlineIcon } from '@iconify/react';
 // import firstAid from '@iconify-icons/jam/first-aid';
-// npm install --save-dev @iconify/react @iconify-icons/openmoji
+// npm install --save @iconify/react @iconify-icons/openmoji
 import { Icon, InlineIcon } from '@iconify/react';
 import firstAid from '@iconify-icons/openmoji/first-aid';
 
