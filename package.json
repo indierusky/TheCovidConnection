@@ -51,6 +51,10 @@
     "frontend": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
+
+   "engines": {
+    "node": "14.x"
+  },
   "author": "",
   "license": "ISC"
 }
