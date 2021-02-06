@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+   "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -52,9 +55,6 @@
     "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
 
-   "engines": {
-    "node": "14.x"
-  },
   "author": "",
   "license": "ISC"
 }
