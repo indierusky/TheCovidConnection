@@ -289,10 +289,9 @@ color: #ca9f05;
     text-decoration: none;
 }
 
-.splash-btns:hover {
-    color: goldenrod;
+/* .splash-btns:hover {
     border: 1px solid goldenrod;
-}
+} */
 
 .splash {
     display: flex;
@@ -348,6 +347,8 @@ color: #ca9f05;
 .splash-lnk{
 
  text-decoration: none;
+ color: #005EAA;
+
   
 }
 
