@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => {
     loginUser: user => dispatch(loginUser(user)),
     clearSessionErrors: () => dispatch(clearSessionErrors()),
     other: (
-      <Link className="nav-btns-child-login" onClick={(e) => {e.preventDefault(); return dispatch(openModal('signup'))}}>
+      <Link className="nav-btns-child" onClick={(e) => {e.preventDefault(); return dispatch(openModal('signup'))}}>
         Sign Up
       </Link>
     ),

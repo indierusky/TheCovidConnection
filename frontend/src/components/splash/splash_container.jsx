@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { fetchFavors } from '../../actions/favor_actions';
+import { logout } from '../../actions/session_actions';
+
 import Splash from './splash';
 
 
@@ -14,6 +16,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return {
+        logout: () => dispatch(logout()),
         fetchFavors: () => dispatch(fetchFavors())
     }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import HospitalsNear from './hospitals_near'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodeBranch} from '@fortawesome/free-solid-svg-icons'
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { NavLink, Link } from 'react-router-dom';
 import './about.css'
 
@@ -25,13 +25,15 @@ class About extends React.Component {
                             <div className="links">
                                 <div className="link-text-image">
                                     <a href="https://github.com/indierusky"> 
-                                        {git}
+                                        {/* {git} */}
+                                        <FontAwesomeIcon className="about-lnks" icon={faGithub} />
                                         <p> Github </p>
                                     </a>
                                 </div>
                                 <div className="link-text-image">
                                      <a href="https://www.linkedin.com/in/aaron-robinson-258a77201/"> 
-                                         {link}
+                                         {/* {link} */}
+                                         <FontAwesomeIcon className="about-lnks" icon={faLinkedinIn} />
                                          <p> LinkedIn </p>
                                     </a>
                                 </div>

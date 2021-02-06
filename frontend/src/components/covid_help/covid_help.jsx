@@ -1,10 +1,22 @@
 import React from 'react';
 import ProfileNavContainer from '../profiles/profile_nav_container';
+import NavBarContainer from './profile_nav_container_sp';
+
 import ImageSlider from './image_slider';
 import {SlideImages} from './slides';
 
 import '../profiles/profile.css';
 import './covid.css';
+
+import { connect } from 'react-redux';
+// import { fetchFavors, fetchFavorsForUser } from '../../actions/favor_actions';
+// import { updateFavor, deleteFavor } from '../../actions/favor_actions';
+// import NewsFeed from './newsfeed'
+import {openModal, closeModal} from '../../actions/modal_actions';
+
+
+
+
 
 
 class CovidHelp  extends React.Component {
@@ -19,10 +31,18 @@ this.plusSlides = this.plusSlides.bind(this);
 this.currentSlide = this.currentSlide.bind(this);
 this.showSlides = this.showSlides.bind(this);
 this.handleSlides = this.handleSlides.bind(this);
+this.handleNav = this.handleNav.bind(this);
 
 
 }
 
+handleNav() {
+        if (this.props.loggedIn ) {
+            return <ProfileNavContainer /> 
+        } else {
+            return  <NavBarContainer /> 
+        }
+    }
 
 
 
@@ -158,12 +178,12 @@ render() {
 
  const slideShow = this.showSlides(this.state.slideIndex);
 
-
+ const  realNav =  this.handleNav();
 return (
 
 <>
 
-<ProfileNavContainer />
+<div>{realNav}</div> 
 
 <div> {slides} </div>
 {/* 
@@ -209,5 +229,29 @@ return (
 
 }
 
+const mSTP = (state, ownProps) => {
+  
+  return {
+    user_profile_id: ownProps.match.params.user_id,
+    favors: state.entities.favors,
+    loggedIn: state.session.isAuthenticated,
+    currentUser: state.session.user,
+    modal: state.ui.modal,
 
-export default CovidHelp;
+  };
+};
+
+const mDTP = dispatch => {
+  return {
+    // fetchFavors: () => dispatch(fetchFavors()),
+    openModal: modal => dispatch(openModal(modal)),
+    closeModal: () => dispatch(closeModal()),
+    // fetchFavorsForUser: (user_id) => dispatch(fetchFavorsForUser(user_id)),
+    // updateFavor: (favor) => dispatch(updateFavor(favor)),
+    // deleteFavor: (favor_id) => dispatch(deleteFavor(favor_id))
+
+  };
+};
+
+
+export default connect(mSTP, mDTP)(CovidHelp);

@@ -30,7 +30,7 @@ getLinks() {
       if (this.props.loggedIn) {
         return (
             <div className="nav-bar-right">
-                <button  className="splash-btns"><Link to={'/profile'}>View Profile</Link></button>
+                <button className="splash-btns"><Link className="splash-lnk" to={'/profile'}>View Profile</Link></button>
                 <button className="splash-btns" onClick={this.logoutUser}>Logout</button>
             </div>
         );
@@ -110,7 +110,11 @@ getLinks() {
                              It is a maxim that is found in most religions and cultures.</h2>
                         <p className="grid-p"> CC users are gold members who adhere to the golden rule! </p>
                         <p className="grid-p"> To view good deeds of other users or help someone in need take a tour of the newsfeed! </p>
-                        <button  className="splash-btns"><Link to={'/newsfeed'}>Newsfeed</Link></button>
+                    
+                                                
+                                                
+                      <button  className="splash-btns"><Link className="splash-lnk" to={'/newsfeed'}>Newsfeed</Link></button>
+
 
                     </div>
                     <div className="grid-item item8 right-edge">

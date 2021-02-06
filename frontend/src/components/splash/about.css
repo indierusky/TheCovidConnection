@@ -286,6 +286,7 @@ color: #ca9f05;
     margin-right: 20px;
     border-radius: 8px;
     background-color: goldenrod;
+    text-decoration: none;
 }
 
 .splash-btns:hover {
@@ -336,3 +337,17 @@ color: #ca9f05;
 
     font-size: 24px;
 }
+
+
+.splash-btns{
+
+  text-decoration: none;
+
+}
+
+.splash-lnk{
+
+ text-decoration: none;
+  
+}
+
