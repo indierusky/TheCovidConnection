@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-   "engines": {
+  "engines": {
     "node": "14.x"
   },
   "dependencies": {
@@ -38,6 +38,7 @@
     "validator": "^13.5.1"
   },
   "devDependencies": {
+    "@iconify-icons/fa-solid": "^1.1.0",
     "@iconify-icons/fluent": "^1.1.1",
     "@iconify-icons/fxemoji": "^1.1.0",
     "@iconify/icons-fa-solid": "^1.1.0",
@@ -54,7 +55,6 @@
     "frontend": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
-
   "author": "",
   "license": "ISC"
 }
