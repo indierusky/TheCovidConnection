@@ -13,6 +13,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@googlemaps/markerclustererplus": "^1.0.3",
     "@iconify-icons/jam": "^1.1.0",
+    "@iconify-icons/openmoji": "^1.1.4",
     "@iconify-icons/ph": "^1.1.1",
     "@types/express": "^4.17.9",
     "@types/mongoose": "^5.10.1",

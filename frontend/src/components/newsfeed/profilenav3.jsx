@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faCircle, faPlus, faBell, faNewspaper, faUser, faBars, faSignOutAlt, faUserPlus, faSignInAlt} from '@fortawesome/free-solid-svg-icons';
 import { Icon, InlineIcon } from '@iconify/react';
 import firstAid from '@iconify-icons/openmoji/first-aid';
-// npm install --save-dev @iconify/react @iconify-icons/ph
+// npm install --save @iconify/react @iconify-icons/ph
 // import { Icon, InlineIcon } from '@iconify/react';
 import firstAidLight from '@iconify-icons/ph/first-aid-light';
 
