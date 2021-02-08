@@ -54,9 +54,3 @@ class About extends React.Component {
 }
 
 export default About;
-
-         {/* <div className="link-text-image">
-
-                                    <img className="link-image" src="https://images.spot.im/v1/production/xfghicjlsq78tkpf9xxe" />
-                                    <p> Angel List </p>
-                                </div> */}
