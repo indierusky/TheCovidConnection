@@ -83,7 +83,7 @@ getLinks() {
                     </div>
                     <div className="grid-item item2 grid-text">
                         <h1 className="sp-title-header"> Need help during the pandemic? </h1> 
-                          <h2> Whether you are currently on quarantine or simply in need of a little help. <br /><br/>
+                          <h2> Whether you are currently on quarantine or simply in need of a little help... <br /><br/>
                           <b> Covid Connection</b> was made just for you!  </h2>
                         <p className="grid-p"> Starting is very simple. Sign up, request a favor and someone will assist! </p>
                         <div className="button-div">

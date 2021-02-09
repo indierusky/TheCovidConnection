@@ -4,7 +4,7 @@ import './newsfeed.css'
 import ProfileNavContainer from './profile_nav_container';
 //import { faVirus } from '@fortawesome/free-solid-svg-icons';
 import NavBar from '../../session/navbar_container'
-import NavBarContainer from './profile_nav_container_sp';
+import NavBarContainer from './nav_container_news.js';
 
 class NewsFeed extends React.Component {
     constructor(props) {
@@ -64,11 +64,9 @@ class NewsFeed extends React.Component {
 
 
     handleNav() {
-        if (this.props.loggedIn ) {
-            return <ProfileNavContainer /> 
-        } else {
+       
             return  <NavBarContainer /> 
-        }
+        
     }
 
 

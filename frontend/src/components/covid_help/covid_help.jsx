@@ -37,11 +37,9 @@ this.handleNav = this.handleNav.bind(this);
 }
 
 handleNav() {
-        if (this.props.loggedIn ) {
-            return <ProfileNavContainer /> 
-        } else {
+       
             return  <NavBarContainer /> 
-        }
+        
     }
 
 

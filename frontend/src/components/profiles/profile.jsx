@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLifeRing, faHandsHelping} from '@fortawesome/free-solid-svg-icons';
 import FavorsReducer from '../../reducers/favors_reducer';
 // import NavBarContainer from './../splash/profile_nav_container';
-import NavBarContainer from './profile_nav_container';
+import NavBarContainer from './nav_container_profile.js';
 
 // import NavBarNoLogoContainer from '../../session/navbar_no_logo_container';
 
@@ -288,7 +288,7 @@ class Profile extends React.Component {
 
           return (
             <>
-              <ProfileNavContainer />
+              <NavBarContainer />
             <div className="profile-view">
             {/* <div  className="banners">
                      <h3 className="covid-help">  Currently experiencing Covid symptoms?  Visit our info page for tips handling stress --

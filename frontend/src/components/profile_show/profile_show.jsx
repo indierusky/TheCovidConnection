@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileNavContainer from '../profiles/profile_nav_container';
+import ProfileNavContainer from '../profiles/nav_container_profile.js';
 import {NavLink, Link} from 'react-router-dom';
 // import FavorItem from '../favors/favor_item';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
