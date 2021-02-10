@@ -637,6 +637,8 @@ button.home-lk{
   cursor: pointer;
   margin-left: -20%;
   font-size: 18px;
+  text-align: center;
+  align-items: center;
 
 }
 
@@ -650,12 +652,24 @@ font-size: 48px;
 
 }
 
-.add-favor{
+img.add-favor{
 
-width: 32px;
-height: 32px;
+width: 28px;
+height: 28px;
 
 }
+.acceptance{
+
+margin-left: 2%;
+
+}
+.prof-title{
+
+margin-left: 10%;
+
+
+}
+
 
 .header a {
   float: left;

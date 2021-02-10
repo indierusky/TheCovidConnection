@@ -277,17 +277,17 @@ class ProfileShow extends React.Component {
                   <div className="favor-request-boxes">
                     <h2 className="prof-fav-hd"> <FontAwesomeIcon icon={faLifeRing} />  Requested Favors</h2>
                     <div className="favor-button-and-text" onClick={this.renderForm('favor')}>
-                      <button className="favor-btn" onClick={this.renderForm('favor')}>
+                      <button className="favor-btn" onClick={this.renderForm('favor')}>Favor
                         <img className="add-favor" src="https://cdn2.iconfinder.com/data/icons/vibrancie-health/30/health_002-medical-cross-hospital-first-aid-doctor-512.png" />
                       </button>
-                      <p id="add-favor-text">{"Ask Favor"}</p>
+                      {/* <p id="add-favor-text">{"Ask Favor"}</p> */}
                     </div>
                   </div>
                   {favors}
                 </div>
 
                 <div className="favor-lst-taken">
-                  <h2 className="prof-fav-hd-taken"> <FontAwesomeIcon icon={faHandsHelping} />  Taken Favors</h2>
+                  <h2 className="prof-fav-hd acceptance"> <FontAwesomeIcon icon={faHandsHelping} />  Accepted Favors</h2>
                   <div className="favor-button-and-text" onClick={this.renderForm('favor')}>
                     <div className="add-favor-ghost"></div>
 

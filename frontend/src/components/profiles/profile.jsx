@@ -319,7 +319,7 @@ class Profile extends React.Component {
                       <img className="add-favor" src="https://cdn2.iconfinder.com/data/icons/vibrancie-health/30/health_002-medical-cross-hospital-first-aid-doctor-512.png" /> Add Favor</button>
                     {favors}
                 </div>
-                  <h2 className="prof-fav-hd-taken"> <FontAwesomeIcon icon={faHandsHelping} />  Taken Favors</h2>
+                  <h2 className="prof-fav-hd"> <FontAwesomeIcon icon={faHandsHelping} />  Taken Favors</h2>
                   <div className="favor-lst">
                     {taken_favors}
                   </div>
@@ -360,24 +360,24 @@ class Profile extends React.Component {
                       <img className="support-banner" src="https://i.ibb.co/bbg6wy4/favorpic-1.png" />
               </div> */}
                   <div className="prof-favors">
-                    <h1 className="favor-title">  Welcome {this.props.currentUser.username}!  </h1>
+                    <h1 className="favor-title prof-title">  Welcome {this.props.currentUser.username}!  </h1>
                     <div className="two-lists">
                     {/* <h3 className="prof-fav-hd2"> These are the good deeds you have requested from others  </h3> <br /> */}
                     <div className="favor-lst-requests">
                       <div className="favor-request-boxes">
                           <h2 className="prof-fav-hd"> <FontAwesomeIcon icon={faLifeRing} />  Requested Favors</h2>
                           <div className="favor-button-and-text" onClick={this.renderForm('favor')}>
-                          <button className="favor-btn" onClick={this.renderForm('favor')}>
+                          <button className="favor-btn" onClick={this.renderForm('favor')}> Favor
                               <img className="add-favor" src="https://cdn2.iconfinder.com/data/icons/vibrancie-health/30/health_002-medical-cross-hospital-first-aid-doctor-512.png" /> 
                           </button>
-                          <p id="add-favor-text">{"Ask Favor"}</p>
+                          {/* <p id="add-favor-text">{"Ask Favor"}</p> */}
                         </div>
                       </div>
                       {favors}
                     </div>
                     
                     <div className="favor-lst-taken">
-                        <h2 className="prof-fav-hd-taken"> <FontAwesomeIcon icon={faHandsHelping} />  Taken Favors</h2>
+                        <h2 className="prof-fav-hd acceptance"> <FontAwesomeIcon icon={faHandsHelping} />  Accepted Favors</h2>
                         <div className="favor-button-and-text" onClick={this.renderForm('favor')}>
                           <div className="add-favor-ghost"></div>
                           
