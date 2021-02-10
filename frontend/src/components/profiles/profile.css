@@ -1134,10 +1134,15 @@ margin-left: -10px; */
      border: 1px solid black;
      padding-bottom: 20px;
      width: 33%;
-     margin-left: 40%;
+     margin-left: 10%;
      border-radius: 12px;
      background-color: lightgray;
      padding-left: 30px;
+
+     /* justify-content: center;
+     align-items: center;
+     text-align: center;
+      float: middle; */
 
    }
 
