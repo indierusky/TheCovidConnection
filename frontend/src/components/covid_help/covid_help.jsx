@@ -24,13 +24,18 @@ class CovidHelp  extends React.Component {
 constructor(props){
     super(props)
 
-  this.state = { slideIndex: 1};
+  this.state = { slideIndex: 1, 
+                 slideIndexP: 1};
 
 
 this.plusSlides = this.plusSlides.bind(this);
 this.currentSlide = this.currentSlide.bind(this);
 this.showSlides = this.showSlides.bind(this);
 this.handleSlides = this.handleSlides.bind(this);
+this.plusPreventSlides = this.plusPreventSlides.bind(this);
+this.currentPreventSlide = this.currentPreventSlide.bind(this);
+this.showPreventSlides = this.showPreventSlides.bind(this);
+this.handlePreventSlides = this.handlePreventSlides.bind(this);
 this.handleNav = this.handleNav.bind(this);
 
 
@@ -111,6 +116,68 @@ return (
 
 }
 
+
+handlePreventSlides() {
+
+return (
+<>
+<div className="slideshow-container-prevent">
+
+  <div className="mySlidesp fade">
+    <div className="numbertext">1 / 5</div>
+    <img className="support-banner" src="https://i.ibb.co/jVgdNYb/rule1-1.jpg"/>
+    <div className="text">Caption one</div>
+  </div>
+
+  <div className="mySlidesp fade">
+    <div className="numbertext">2 / 5</div>
+    <img className="support-banner" src=" https://i.ibb.co/BjyhR3y/rule2-1.jpg"/>
+    <div className="text">Caption Two</div>
+  </div>
+
+  <div className="mySlidesp fade">
+    <div className="numbertext">3 / 5</div>
+    <img className="support-banner" src="https://i.ibb.co/GT2WkfN/rule2.jpg"/>
+    <div className="text">Caption Three</div>
+  </div>
+   <div className="mySlidesp fade">
+    <div className="numbertext">4 / 5</div>
+    <img className="support-banner" src="https://i.ibb.co/3yNcMtk/rule4.jpg"/>
+    <div className="text">Caption Four</div>
+  </div>
+
+  <div className="mySlidesp fade">
+    <div className="numbertext">5 / 5</div>
+    <img className="support-banner" src="https://i.ibb.co/n3GMmZh/rule5.jpg"/>
+    <div className="text">Caption Five</div>
+  </div>
+
+  
+
+  <a className="prev" onClick={() => this.plusPreventSlides(-1)}>&#10094;</a>
+  <a className="next" onClick= {() => this.plusPreventSlides(1)}>&#10095;</a>
+</div>
+<br />
+ <div >
+  <center> 
+  <span className="dotp" onClick= {() => this.currentPreventSlide(1)}></span>
+  <span className="dotp" onClick={() => this.currentPreventSlide(2)}></span>
+  <span className="dotp" onClick={() => this.currentPreventSlide(3)}></span>
+  <span className="dotp" onClick={() => this.currentPreventSlide(4)}></span>
+  <span className="dotp" onClick={() => this.currentPreventSlide(5)}></span>
+  <span className="dotp" onClick={() => this.currentPreventSlide(6)}></span>
+
+
+  
+  </center> 
+</div> 
+</>
+
+
+)
+
+}
+
 showSlides(n) {
 
     let i;
@@ -127,6 +194,27 @@ showSlides(n) {
   }
    if(slides[this.state.slideIndex-1] !== undefined) slides[this.state.slideIndex-1].style.display = "block";
    if(dots[this.state.slideIndex-1] !== undefined) dots[this.state.slideIndex-1].className += "active";
+  
+  }
+
+}
+
+  showPreventSlides(n) {
+
+    let i;
+  const slides = document.getElementsByClassName("mySlidesp");
+  const dots = document.getElementsByClassName("dotp");
+  if(slides.length > 0 ){
+  if (n > slides.length) this.setState({slideIndexP:  1})
+  if (n < 1) this.setState({slideIndexP: slides.length})
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace("active", "");
+  }
+   if(slides[this.state.slideIndexP-1] !== undefined) slides[this.state.slideIndexP-1].style.display = "block";
+   if(dots[this.state.slideIndexP-1] !== undefined) dots[this.state.slideIndexP-1].className += "active";
   
   }
 
@@ -169,21 +257,66 @@ currentSlide(n) {
 }
 
 
+
+plusPreventSlides(n) {
+
+let current = this.state.slideIndexP;
+let next = current + n;
+ this.setState({ slideIndexP: next}) 
+ this.showPreventSlides(this.state.slideIndex);
+}
+
+// Thumbnail image controls
+currentPreventSlide(n) {
+
+  this.setState({ slideIndexP: n})
+  this.showPreventSlides(this.state.slideIndexP);
+}
+
+
 render() {
 
  const slides = this.handleSlides();   
-
+ const preventSlides = this.handlePreventSlides();
 
  const slideShow = this.showSlides(this.state.slideIndex);
+ const preventSlideShow = this.showPreventSlides(this.state.slideIndexP);
 
  const  realNav =  this.handleNav();
 return (
 
 <>
-
 <div>{realNav}</div> 
 
+<div className="covid-intro"> 
+<h1 className="covid-title">  Welcome to the <span className="first-letter">C</span>ovid <span className="first-letter">C</span>orner!  </h1>
+<h3 className="covid-subtitle"> The double golden <span className="first-letter">C</span> adorns every members profile symbolizing the golden rule we all follow. <br />
+<span className="first-letter">CC</span> members are <span className="first-letter">C</span>ompassionate, <span className="first-letter">C</span>aring, <span className="first-letter">C</span>ourageous, <span className="first-letter">C</span>oncerned, <span className="first-letter">C</span>onsiderate, <span className="first-letter">C</span>omforting, 
+<br /> <span className="first-letter">C</span>reative, <span className="first-letter">C</span>aptivating and <span className="first-letter">C</span>onquering the Corona virus with love and committment </h3>
+ <h2 className="covid-subtitle"> This is our covid 19 resource page where you can find <br />
+  vital information regarding the pandemic affecting our world.   </h2>
+
+
+</div>
+
+<div className="slide-header"> If you or anyone you know are currently feeling stressed or overwhelmed due to <br/> covid-19 related issues... 
+ Here goes some really important tips on how to deal with things... </div>
+
 <div> {slides} </div>
+
+<div className="slide-header"> If you or anyone you know may have been exposed to someone who has covid-19 <br/> 
+ Here goes some really important signs and syptoms to look out for... </div>
+
+     <img className="symptom-banner" src="https://i.ibb.co/vHcZj21/symptoms.png"/>
+
+
+
+<div className="slide-header prevent-header"> Here goes some tips on how to stay safe and prevent the spread of Covid 19 Remember to practice social <br/> distancing.
+ Here goes some really important tips on how to deal with things.  Especially for children if they are in school or travel outside. </div>
+
+  <div> {preventSlides} </div>
+
+
 {/* 
 <div>
   <ImageSlider slides={SlideImages} />
