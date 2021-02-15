@@ -165,7 +165,6 @@ return (
   <span className="dotp" onClick={() => this.currentPreventSlide(3)}></span>
   <span className="dotp" onClick={() => this.currentPreventSlide(4)}></span>
   <span className="dotp" onClick={() => this.currentPreventSlide(5)}></span>
-  <span className="dotp" onClick={() => this.currentPreventSlide(6)}></span>
 
 
   
@@ -189,11 +188,9 @@ showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace("active", "");
-  }
+  
+  
    if(slides[this.state.slideIndex-1] !== undefined) slides[this.state.slideIndex-1].style.display = "block";
-   if(dots[this.state.slideIndex-1] !== undefined) dots[this.state.slideIndex-1].className += "active";
   
   }
 
@@ -203,42 +200,22 @@ showSlides(n) {
 
     let i;
   const slides = document.getElementsByClassName("mySlidesp");
-  const dots = document.getElementsByClassName("dotp");
+  const dotps = document.getElementsByClassName("dotp");
   if(slides.length > 0 ){
   if (n > slides.length) this.setState({slideIndexP:  1})
   if (n < 1) this.setState({slideIndexP: slides.length})
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace("active", "");
-  }
+  
    if(slides[this.state.slideIndexP-1] !== undefined) slides[this.state.slideIndexP-1].style.display = "block";
-   if(dots[this.state.slideIndexP-1] !== undefined) dots[this.state.slideIndexP-1].className += "active";
   
   }
 
-// let i;
-// // getElementsByClassName
-//   const slides = document.getElementsByClassName("mySlides");
-//   if(!slides.length) return null;
-//  if(slides.length > 0){
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   this.setState({slideIndex: this.slideIndex+1});
-//   if (this.state.slideIndex > slides.length) this.setState({slideIndex: 1})
 
-  
-//   slides[this.state.slideIndex-1].style.display = "block";
-//   setTimeout(this.showSlides, 2000); // Change image every 2 seconds
-//   }
 }
 
-// componentWillReceiveProps(newState) {
-//       this.setState({slideIndex: newState.slideIndex, });
-//     }
-   
+
 
 
 plusSlides(n) {
@@ -305,14 +282,14 @@ return (
 <div> {slides} </div>
 
 <div className="slide-header"> If you or anyone you know may have been exposed to someone who has covid-19 <br/> 
- Here goes some really important signs and syptoms to look out for... </div>
+ Here goes some really important signs and symptoms to look out for... </div>
 
      <img className="symptom-banner" src="https://i.ibb.co/vHcZj21/symptoms.png"/>
 
 
 
 <div className="slide-header prevent-header"> Here goes some tips on how to stay safe and prevent the spread of Covid 19 Remember to practice social <br/> distancing.
- Here goes some really important tips on how to deal with things.  Especially for children if they are in school or travel outside. </div>
+ Especially for anyone with children, if they are in school or travel outside please note... </div>
 
   <div> {preventSlides} </div>
 
