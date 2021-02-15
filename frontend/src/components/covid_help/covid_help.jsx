@@ -263,6 +263,7 @@ render() {
 return (
 
 <>
+<section className="covid-help-page">
 <div>{realNav}</div> 
 
 <div className="covid-intro"> 
@@ -313,6 +314,8 @@ return (
     <img className="support-banner" src="https://i.ibb.co/ZxttcGY/6.png"/>
                           
 </div> */}
+
+</section>
 </>
 
 
