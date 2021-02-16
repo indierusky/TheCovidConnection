@@ -269,8 +269,8 @@ return (
 <div className="covid-intro"> 
 <h1 className="covid-title">  Welcome to the <span className="first-letter">C</span>ovid <span className="first-letter">C</span>orner!  </h1>
 <h3 className="covid-subtitle"> The double golden <span className="first-letter">C</span> adorns every members profile symbolizing the golden rule we all follow. <br />
-<span className="first-letter">CC</span> members are <span className="first-letter">C</span>ompassionate, <span className="first-letter">C</span>aring, <span className="first-letter">C</span>ourageous, <span className="first-letter">C</span>oncerned, <span className="first-letter">C</span>onsiderate, <span className="first-letter">C</span>omforting, 
-<br /> <span className="first-letter">C</span>reative, <span className="first-letter">C</span>aptivating and <span className="first-letter">C</span>onquering the Corona virus with love and committment </h3>
+<span className="first-letter">CC</span> members are <span className="first-letter">C</span>ompassionate, <span className="first-letter">C</span>aring, <span className="first-letter">C</span>ourteous, <span className="first-letter">C</span>oncerned, <span className="first-letter">C</span>onsiderate, <span className="first-letter">C</span>omforting, 
+<br /> <span className="first-letter">C</span>reative, <span className="first-letter">C</span>aptivating and <span className="first-letter">C</span>onquering the Corona virus with <span className="first-letter">C</span>ourage and <span className="first-letter">C</span>ommittment </h3>
  <h2 className="covid-subtitle"> This is our covid 19 resource page where you can find <br />
   vital information regarding the pandemic affecting our world.   </h2>
 

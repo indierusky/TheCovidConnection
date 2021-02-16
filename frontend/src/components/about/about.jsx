@@ -9,13 +9,12 @@ import './about.css'
 class About extends React.Component {
 
     render() {
-        const git = <img alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
-        const link = <img alt="icon" src="https://pngmind.com/wp-content/uploads/2019/08/Linkedin-Logo-Png-Transparent-Background.png" width={30} height = {30} ></img>
+         
         return(
             <div className="about">
                     <div className="about-header">
-                        <h1> About The Developer </h1>
-                        <h2> View more of my projects or contact me!</h2>
+                        <h1> About The Developers </h1>
+                        <h2> View more of our projects or contact us!</h2>
                     </div>
                     <div className="about-people">
                         
@@ -25,14 +24,12 @@ class About extends React.Component {
                             <div className="links">
                                 <div className="link-text-image">
                                     <a href="https://github.com/indierusky"> 
-                                        {/* {git} */}
                                         <FontAwesomeIcon className="about-lnks" icon={faGithub} />
                                         <p> Github </p>
                                     </a>
                                 </div>
                                 <div className="link-text-image">
                                      <a href="https://www.linkedin.com/in/aaron-robinson-258a77201/"> 
-                                         {/* {link} */}
                                          <FontAwesomeIcon className="about-lnks" icon={faLinkedinIn} />
                                          <p> LinkedIn </p>
                                     </a>
@@ -43,6 +40,49 @@ class About extends React.Component {
                             
                         </div>
 
+                     <div className="person-div">
+                            <h2> Divyam Satyarthi </h2>
+                            <div className="links">
+                                <div className="link-text-image">
+                                    <a href="https://github.com/divyams1">
+                                        <FontAwesomeIcon className="about-lnks" icon={faGithub} />
+
+                                        <p> Github </p>
+                                    </a>
+                                </div>
+                                <div className="link-text-image">
+                                    <a href="https://www.linkedin.com/in/divyam-satyarthi-b6628513b/">
+                                     <FontAwesomeIcon className="about-lnks" icon={faLinkedinIn} />
+
+                                    <p> LinkedIn</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <h4> Email: divyamsat@gmail.com </h4>
+                            <h4> Phone: 443-838-7815</h4>
+                        </div>
+
+                     <div className="person-div">
+                            <h2> Anthony Collichio </h2>
+                            <div className="links">
+                                    <div className="link-text-image">
+                                <a  href="https://github.com/collich55">
+                                        <FontAwesomeIcon className="about-lnks" icon={faGithub} />
+
+                                            <p> Github</p>
+                                            </a>
+                                    </div>
+                                    <div className="link-text-image">
+                                <a  href="https://www.linkedin.com/in/anthony-collichio-451b11103/"> 
+                                        <FontAwesomeIcon className="about-lnks" icon={faLinkedinIn} />
+
+                                            <p> LinkedIn </p>
+                                        </a>
+                                    </div>
+                            </div>
+                            <h4> Email: collich55@gmail.com  </h4>
+                            <h4> Phone: 585-794-3850  </h4>
+                        </div>
                         
                     </div>
                     <Link id="back-link" to={'/'}>Back</Link>
