@@ -2,12 +2,16 @@ import React from 'react';
 import ProfileNavContainer from './profile_nav_container';
 import {NavLink, Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faLifeRing, faHandsHelping} from '@fortawesome/free-solid-svg-icons';
+import { faUser, faLifeRing, faHandsHelping, faPlus, faBell, faBars, faCircle} from '@fortawesome/free-solid-svg-icons';
 import FavorsReducer from '../../reducers/favors_reducer';
 // import NavBarContainer from './../splash/profile_nav_container';
 import NavBarContainer from './nav_container_profile.js';
-
 // import NavBarNoLogoContainer from '../../session/navbar_no_logo_container';
+import { Icon, InlineIcon } from '@iconify/react';
+import emailIcon from '@iconify-icons/fxemoji/email';
+import signOut20Regular from '@iconify-icons/fluent/sign-out-20-regular';
+import ellipsisH from '@iconify-icons/fa-solid/ellipsis-h';
+
 
 
 
@@ -15,12 +19,133 @@ import NavBarContainer from './nav_container_profile.js';
 class Profile extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.favors;
+        this.state = { favors: this.props.favors, 
+                        notes: false, 
+                        info: false, 
+                        add: false,
+                        showFavors: false  } 
+
         this.handleFavors = this.handleFavors.bind(this);
         this.handleNoFavors = this.handleNoFavors.bind(this);
         this.renderForm = this.renderForm.bind(this);
         this.handleTime = this.handleTime.bind(this);
+        this.showDropdown = this.showDropdown.bind(this);
+        this.favorMenu = this.favorMenu.bind(this);
+        this.showUserInfo = this.showUserInfo.bind(this);
     }
+
+
+
+
+    showDropdown(field) {
+        return e => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.setState({[field]: !this.state[field]}, () => {
+            if (this.state[field] === true) { 
+                document.addEventListener('click', this.showDropdown);
+             } else {
+                document.removeEventListener("click", this.showDropdown) 
+
+            }
+            });
+        }
+    }
+
+    
+    addMenu(){
+
+
+return(
+
+<section className="add-menu-items" >
+ <h2 className="author-menu">  Create  <span className="menu-x" onClick={this.showDropdown("add")}>  X </span> </h2>
+    <hr />
+
+    <div className="add-menu-list">
+
+        
+        <span className="add-menu-item" onClick={this.renderForm('favor')}>
+        <span><FontAwesomeIcon icon={faHandsHelping} />Create Favor    
+        <p className="add-menu-desc" > A member of CC can either request a favor when in need or keep record of something they 
+        have done as a good deed. </p></span></span>
+
+    </div>
+    </section>
+
+)
+
+} 
+
+
+    favorMenu(){
+
+ if(this.props.favors.length === 0) return  null;
+      
+     
+   const favors =  this.props.favors
+                   .filter(favor => favor.favor_for_user_id === this.props.currentUser.id)
+                    .map(favor => {
+            
+            return ( <span> {favor.favor_title} <br /></span> );
+        })
+
+      return (
+
+            <section className="favor-menu-items" >
+          <h2 className="author-menu">  Favors  <span className="menu-x" onClick={this.showDropdown("favors")}>  X </span> </h2>
+         <div className="favor-menu-list">
+            <div className="add-menu-item">
+            <span className="favor-menu-list">  {favors} </span>
+
+            </div>
+        </div>
+         </section>   
+      )
+    
+    }
+
+
+
+    showUserInfo(){
+
+
+return(
+
+<section className="sidenav" >
+  <section className="add-menu-items">
+ <h2 className="author-menu">  Menu  <span className="menu-x" onClick={this.showDropdown("info")}>  X </span> </h2>
+ <hr />
+<div className="profile-menu-list" >
+    <Link to="/profile" className="user-menu-link"> <span className="prof-info"> 
+      <i className="fas fa-user-circle"> {this.props.currentUser.username} <p className="pi-style">See your profile </p></i></span></Link>
+    
+ <hr />
+
+ <span > <Icon icon={emailIcon} />  <span className="email-info">{this.props.currentUser.email}</span></span>
+
+ <hr />
+  <span className="logout-menu" onClick={this.logoutUser}> <Icon className="log-men-door" icon={signOut20Regular} />
+  <span className="lg-men">Log Out</span></span> 
+
+</div>
+</section>
+</section> 
+
+
+)
+
+}
+
+renderForm(field) {
+    if (this.props.modal === field) {
+      return () => {
+        this.props.closeModal();
+      }
+    }
+    return () => this.props.openModal(field)
+  }
+
     componentDidMount() {
       console.log(this.props.currentUser.id)
       this.props.fetchFavors();
@@ -344,6 +469,32 @@ class Profile extends React.Component {
                 {/* <ProfileNavContainer /> */}
                 <NavBarContainer/>
                 <div className="profile-view">
+
+                   <div className="profile-page-header"> 
+                        <div className="mid">     
+                              <div onClick={this.showDropdown("add")}>
+                                  <button className="home-lk"><FontAwesomeIcon className="fstyle profile-plus" icon={faPlus}/></button>Request Favor
+                              </div>  
+
+                                {this.state.add ? this.addMenu() : null}
+                  </div>
+
+                <div  className="profile-header-mid"> 
+                
+                      <span className="favor-subhead">  {this.props.currentUser.username}'s Profile  </span>
+                </div>
+
+                <div className="profile-header-right" onClick={this.showDropdown("info")}>
+                            <button className="home-lk-menu"><Icon icon={ellipsisH} />   Show Menu</button>
+
+                            {this.state.info ? this.showUserInfo() : null}
+
+
+                </div>
+           
+
+           </div>
+
                   {/* <div  className="banners">
                      <h3 className="covid-help">  Currently experiencing Covid symptoms?  Visit our info page for tips handling stress --
                        <NavLink to="/covid">Covid Help</NavLink> </h3>
@@ -360,7 +511,7 @@ class Profile extends React.Component {
                       <img className="support-banner" src="https://i.ibb.co/bbg6wy4/favorpic-1.png" />
               </div> */}
                   <div className="prof-favors">
-                    <h1 className="favor-title prof-title">  Welcome {this.props.currentUser.username}!  </h1>
+                    {/* <h1 className="favor-title prof-title">  Welcome {this.props.currentUser.username}!  </h1> */}
                     <div className="two-lists">
                     {/* <h3 className="prof-fav-hd2"> These are the good deeds you have requested from others  </h3> <br /> */}
                     <div className="favor-lst-requests">
