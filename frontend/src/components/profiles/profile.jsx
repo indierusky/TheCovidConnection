@@ -32,6 +32,7 @@ class Profile extends React.Component {
         this.showDropdown = this.showDropdown.bind(this);
         this.favorMenu = this.favorMenu.bind(this);
         this.showUserInfo = this.showUserInfo.bind(this);
+        this.logoutUser  = this.logoutUser.bind(this);
     }
 
 
@@ -106,6 +107,11 @@ return(
     }
 
 
+
+logoutUser(e) {
+      e.preventDefault();
+      this.props.logout();
+  }
 
     showUserInfo(){
 

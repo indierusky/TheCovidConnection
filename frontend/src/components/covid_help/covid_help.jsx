@@ -268,29 +268,28 @@ return (
 
 <div className="covid-intro"> 
 <h1 className="covid-title">  Welcome to the <span className="first-letter">C</span>ovid <span className="first-letter">C</span>orner!  </h1>
-<h3 className="covid-subtitle"> The double golden <span className="first-letter">C</span> adorns every members profile symbolizing the golden rule we all follow. <br />
+<span className="covid-subtitle"> The double golden <span className="first-letter">C</span> adorns every members profile symbolizing the golden rule we all follow. <br />
 <span className="first-letter">CC</span> members are <span className="first-letter">C</span>ompassionate, <span className="first-letter">C</span>aring, <span className="first-letter">C</span>ourteous, <span className="first-letter">C</span>oncerned, <span className="first-letter">C</span>onsiderate, <span className="first-letter">C</span>omforting, 
-<br /> <span className="first-letter">C</span>reative, <span className="first-letter">C</span>aptivating and <span className="first-letter">C</span>onquering the Corona virus with <span className="first-letter">C</span>ourage and <span className="first-letter">C</span>ommittment </h3>
+<br /> <span className="first-letter">C</span>reative, <span className="first-letter">C</span>aptivating and <span className="first-letter">C</span>onquering the Corona virus with <span className="first-letter">C</span>ourage and <span className="first-letter">C</span>ommittment </span>
  <h2 className="covid-subtitle"> This is our covid 19 resource page where you can find <br />
   vital information regarding the pandemic affecting our world.   </h2>
 
 
 </div>
 
-<div className="slide-header"> If you or anyone you know are currently feeling stressed or overwhelmed due to <br/> covid-19 related issues... 
- Here goes some really important tips on how to deal with things... </div>
+<div className="slide-header"> Tips for dealing with stress during the pandemic</div>
 
 <div> {slides} </div>
 
-<div className="slide-header"> If you or anyone you know may have been exposed to someone who has covid-19 <br/> 
- Here goes some really important signs and symptoms to look out for... </div>
+<div className="slide-header"> If you or anyone you know have been exposed to covid-19 <br/> 
+ Here are some really important signs and symptoms to look out for... </div>
 
      <img className="symptom-banner" src="https://i.ibb.co/vHcZj21/symptoms.png"/>
 
 
 
-<div className="slide-header prevent-header"> Here goes some tips on how to stay safe and prevent the spread of Covid 19 Remember to practice social <br/> distancing.
- Especially for anyone with children, if they are in school or travel outside please note... </div>
+<div className="slide-header prevent-header">Tips on how to stay healthy and stop the spread.<br/> 
+                                             These slides are especially helpful to kids who go to school </div>
 
   <div> {preventSlides} </div>
 

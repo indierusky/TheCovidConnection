@@ -180,7 +180,8 @@ user-select: none;
 .covid-title{
 
   color: #172bd4;
-  text-align: center;
+  /* text-align: center; */
+  margin-left: -5%;
   font-family: 'Josefin Sans', sans-serif;
 
 }
@@ -191,17 +192,27 @@ user-select: none;
   color: #172bd4;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+   /* justify-content: center;
+   align-self: center;
+   align-items: center; */
 
+}
 
+.covid-intro{
+
+  text-align: center;
 }
 
 
 .slide-header{
 
 
-  color: red;
+  color: goldenrod;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
   margin-top: 5%;
   margin-bottom: 2%;
 

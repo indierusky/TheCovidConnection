@@ -3,6 +3,7 @@ import { fetchFavors, fetchFavorsForUser } from '../../actions/favor_actions';
 import { updateFavor, deleteFavor } from '../../actions/favor_actions';
 import Profile from './profile';
 import {openModal, closeModal} from '../../actions/modal_actions';
+import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => {
   
@@ -22,6 +23,7 @@ const mapDispatchToProps = dispatch => {
     closeModal: () => dispatch(closeModal()),
     fetchFavorsForUser: (user_id) => dispatch(fetchFavorsForUser(user_id)),
     updateFavor: (favor) => dispatch(updateFavor(favor)),
+    logout: () => dispatch(logout()),
     deleteFavor: (favor_id) => dispatch(deleteFavor(favor_id))
 
   };
