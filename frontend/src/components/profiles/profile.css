@@ -316,7 +316,7 @@ span.add-menu-item{
   display: flex;
   flex-direction: row;
   /* border: 1px solid black; */
-  background-color: #DDE0E5;
+   background-color: rgb(255,255,255);
   color: #172b4d;
 
 
@@ -326,7 +326,7 @@ span.add-menu-item{
  font-size: 12px;
  color: #172b4d;
  margin: 4px;
-background-color: #DDE0E5;
+   background-color: rgb(255,255,255);
 
 
 
@@ -338,7 +338,7 @@ background-color: #DDE0E5;
   flex-direction: column;
   align-content: center;
   text-align: left;
-   background-color: #DDE0E5;
+   background-color: rgb(255,255,255);
 	/* top: 60px;
 	right: 20; */
   width: 300px;
@@ -350,7 +350,7 @@ background-color: #DDE0E5;
 
 
 .add-menu-list > * {
-   background-color: rgb(221,224,229);
+   background-color: rgb(255,255,255);
     /* border: 1px solid rgb(221,224,229); */
     border: 1px solid black;
     margin: 5px;
@@ -393,27 +393,16 @@ background-color: #DDE0E5;
 
 
 
- .menu-x{
- cursor: pointer;
- padding: 12px;
- width: 12px;
- height: 12px;
- /* position: absolute; */
- text-align: center;
- margin-top: -10px;
- 
-
- }
-
 .author-menu{
 
    color: #172b4d; 
    display: flex;
    flex-direction: row;
    /* padding: 12px;  */
-   align-self: center;
+   /* align-self: center;
    align-items: center;
-   justify-content: center;
+   justify-content: center; */
+   margin-left: 100px;
    font-size: 18px;
    background-color: rgb(255,255,255);
    overflow: visible;
@@ -492,6 +481,7 @@ button.home-lk{
   /* height: 10px; */
   display: flex;
   flex-direction: row;
+  color: #005eaa;
   height: 32px;
   width: 110px;
   justify-content: space-between;
@@ -1379,21 +1369,15 @@ span.add-menu-item{
   display: flex;
   flex-direction: row;
   /* border: 1px solid black; */
-  background-color: #DDE0E5;
+   background-color: rgb(255,255,255);
   color: #172b4d;
 
 
 }
 
-.add-menu-desc{
- font-size: 12px;
- color: #172b4d;
- margin: 4px;
-background-color: #DDE0E5;
 
 
 
-}
 
 .add-menu-list{
   position: relative;
@@ -1458,12 +1442,15 @@ background-color: #DDE0E5;
 
  .menu-x{
  cursor: pointer;
- padding: 12px;
+ /* padding: 12px; */
  width: 12px;
  height: 12px;
  /* position: absolute; */
  float: right;
- margin-top: -10px;
+ margin-left: 50%;
+ /* align-items: center;
+ align-self: center; */
+ /* margin-top: 10px; */
  
 
  }
@@ -2339,7 +2326,7 @@ overflow-x: hidden;
 .profile-page-header{
   width: 100%; 
   /* background-color: #0000003d; */
-  background-color: goldenrod;
+  background-color: gold;
   padding: 8px 4px 4px 8px;
   display: flex;
   flex-direction: row;
@@ -2369,7 +2356,7 @@ overflow-x: hidden;
 width: 304px;
 height: auto;
 /* background-color: rgb(255,255,255); */
-background-color: #DDE0E5;
+   background-color: rgb(255,255,255);
 /* border: 1px solid rgb(221,224,229); */
 border: 1px solid black;
 align-content: center;
@@ -2408,4 +2395,64 @@ text-align: center;
 margin-left: 32.5%;
 font-size: 24px;
 
+}
+
+
+.favor-subhead{
+
+color: #005eaa;
+
+
+}
+
+.profile-page-header{
+
+color: #005eaa;
+
+/* font-weight: 1200; */
+
+}
+
+
+.stress-slides{
+
+width: fit-content;
+height: fit-content;
+padding: 8px 16px;
+border: 2px solid goldenrod;
+margin-left: 35%;
+margin-top: 15%;
+
+}
+
+
+
+.prevent-format{
+
+  margin-top: 140px;
+  padding-top: 70px;
+}
+
+
+.symptom-slide{
+
+width: fit-content;
+height: fit-content;
+padding: 8px 16px;
+border: 2px solid goldenrod;
+margin-left: 30%;
+margin-top: 10%;
+
+}
+
+
+.prevent-slides{
+
+width: fit-content;
+height: 50%;
+padding: 0 0 0 0;
+border: 2px solid goldenrod;
+margin-left: 32.5%;
+margin-top: 15%;
+padding-top: -20%;
 }

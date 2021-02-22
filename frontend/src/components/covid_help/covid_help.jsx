@@ -277,21 +277,34 @@ return (
 
 </div>
 
+<div className="stress-slides">
+
 <div className="slide-header"> Tips for dealing with stress during the pandemic</div>
 
-<div> {slides} </div>
-
-<div className="slide-header"> If you or anyone you know have been exposed to covid-19 <br/> 
- Here are some really important signs and symptoms to look out for... </div>
-
-     <img className="symptom-banner" src="https://i.ibb.co/vHcZj21/symptoms.png"/>
+<div > {slides} </div>
+</div>
 
 
 
+
+<div className="prevent-slides">
 <div className="slide-header prevent-header">Tips on how to stay healthy and stop the spread.<br/> 
                                              These slides are especially helpful to kids who go to school </div>
 
   <div> {preventSlides} </div>
+
+</div>
+
+
+<div className="symptom-slide">
+<div className="slide-header"> If you or anyone you know have been exposed to covid-19 <br/> 
+ Here are some really important signs and symptoms to look out for...</div>
+
+    <div> <img className="support-banner" src="https://i.ibb.co/vHcZj21/symptoms.png"/>  </div>
+</div>
+
+
+
 
 
 {/* 

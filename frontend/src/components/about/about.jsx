@@ -13,8 +13,8 @@ class About extends React.Component {
         return(
             <div className="about">
                     <div className="about-header">
-                        <h1> About The Developers </h1>
-                        <h2> View more of our projects or contact us!</h2>
+                        <h1> About The Developer </h1>
+                        <h2> View more of my projects or contact me!</h2>
                     </div>
                     <div className="about-people">
                         

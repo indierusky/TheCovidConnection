@@ -4,6 +4,7 @@
 .covid-help-page{
 
 background-color: #C2EDFF;
+  /* text-align: center; */
 
 
 }
@@ -87,7 +88,7 @@ user-select: none;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -235,6 +236,6 @@ text-align: center; */
 
 .prevent-header{
 
-margin-top: 40%;
+margin-top: 10%;
 
 }

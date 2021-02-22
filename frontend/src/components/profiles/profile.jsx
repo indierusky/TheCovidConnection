@@ -2,7 +2,7 @@ import React from 'react';
 import ProfileNavContainer from './profile_nav_container';
 import {NavLink, Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faLifeRing, faHandsHelping, faPlus, faBell, faBars, faCircle} from '@fortawesome/free-solid-svg-icons';
+import { faUser, faLifeRing, faHandsHelping, faPlus, faBell, faBars, faCircle, faTimes} from '@fortawesome/free-solid-svg-icons';
 import FavorsReducer from '../../reducers/favors_reducer';
 // import NavBarContainer from './../splash/profile_nav_container';
 import NavBarContainer from './nav_container_profile.js';
@@ -60,7 +60,7 @@ class Profile extends React.Component {
 return(
 
 <section className="add-menu-items" >
- <h2 className="author-menu">  Create  <span className="menu-x" onClick={this.showDropdown("add")}>  X </span> </h2>
+ <h2 className="author-menu">  Create  <span className="menu-x" onClick={this.showDropdown("add")}> <FontAwesomeIcon icon={faTimes} /> </span> </h2>
     <hr />
 
     <div className="add-menu-list">
@@ -120,7 +120,7 @@ return(
 
 <section className="sidenav" >
   <section className="add-menu-items">
- <h2 className="author-menu">  Menu  <span className="menu-x" onClick={this.showDropdown("info")}>  X </span> </h2>
+ <h2 className="author-menu">  Menu  <span className="menu-x" onClick={this.showDropdown("info")}>  <FontAwesomeIcon icon={faTimes} /> </span> </h2>
  <hr />
 <div className="profile-menu-list" >
     <Link to="/profile" className="user-menu-link"> <span className="prof-info"> 
