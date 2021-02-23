@@ -2,7 +2,10 @@ import About from './about'
 import { connect } from 'react-redux'; 
 
 const mSTP = state => {
-    return {}
+    return {
+        loggedIn: state.session.isAuthenticated,
+
+    }
 }
 
 const mDTP = dispatch => {

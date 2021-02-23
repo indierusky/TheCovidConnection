@@ -4,13 +4,53 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodeBranch} from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { NavLink, Link } from 'react-router-dom';
-import './about.css'
+import SplashNav2 from './profile_nav_container_sp';
+import NavBarContainer from './navbar_container';
+
+
+import './about.css';
 
 class About extends React.Component {
 
+     constructor(props){
+        super(props)
+
+        
+
+      this.handleNav = this.handleNav.bind(this);
+
+
+     }
+
+    
+
+
+
+  handleNav() {
+
+     if (!this.props.loggedIn) {
+
+        return <NavBarContainer />
+
+     }else{
+
+        return  <SplashNav2 />
+
+     }
+
+
+
+
+
+  }
+
     render() {
+
+        const aboutNav = this.handleNav();
          
         return(
+            <>
+              <div> {aboutNav} </div>
             <div className="about">
                     <div className="about-header">
                         <h1> About The Developer </h1>
@@ -46,6 +86,7 @@ class About extends React.Component {
                     </div>
                     <Link id="back-link" to={'/'}>Back</Link>
                 </div>
+                </>
 
                 
         )
