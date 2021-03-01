@@ -63,7 +63,7 @@ class FavorCreate extends React.Component {
             <div className="favor-create-form">
                 
                 <form id={"favor-form"}>
-                    <center><h1 className="form-head" id={"favor-form-title"}> Create a Favor </h1></center>
+                    <center><h1 className="form-head" id={"favor-form-title"}> Request a Favor </h1></center>
 
                     <br/>
                        <center><img className="logo-img"  src="https://i.ibb.co/5MynHJQ/Clogo3.png"/></center>
@@ -79,9 +79,8 @@ class FavorCreate extends React.Component {
                     <h2 className="form-head"> Status:</h2>
                     <select value={this.state.favor_status} onChange={this.handleDropInput} >
                           <option value="N/A">N/A </option>
-                          <option value= "Done" >Done</option> 
                           <option value= "Request" >Request</option>
-                          <option value= "Doing"  >Doing</option>  
+                         
                     </select>
                     {/* <label>
                         <input id={"input-form"} type='text' placeholder="Request"  />
