@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+Background and Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The world is currently being affected by a pandemic which is something I have not seen in my lifetime.  The Covid Connection is an app created to help those impacted by covid-19 stay informed, connected and offer support.  Users can view a covid help page the educates them on how to deal with handling the overall stress the pandemic places on everyday life.  Users can also review tips on how to stay safe and prevent the spread.   Also, users are informed of the signs and symptoms to look out for if you were to come in contact with someone who was infected and what to do in that case.
 
-## Available Scripts
+The most exciting and innovative feature of the covid connection is the ability of users to request and fulfill favors for each other.   The favor request are generally for those who may be on quarantine or high risk but anyone who is in need of a helping can simply make a request and anyone willing to help can fulfill that request.  
 
-In the project directory, you can run:
+Technologies
 
-### `npm start`
+Mongoose (5.10.19)
+Express (4.17.1)
+React (17.0.1)
+Node (10.13.0)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+User Authentication
 
-### `npm test`
+Users are reqired to create an account to fully access The Covid Connection(CC). There is a demo button on the sign-up page which creates a quick account name and password to allow a user to fully access the site. If you would like to create your own username and password then to complete sign up a user must create a username and enter their email address and create a password. A user must create a password of at least 6 characters and passwords are not stored in the database.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Using Bcrypt hashing algorithm CC securely stores only a password digest. By doing this CC safely authenticates a new user without allowing their password, which may be used on a number of other accounts to ever be exposed. The password digest is what will be used to verify the authenticity of a user during subsequent login sessions.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/67871528/111408930-66ac5900-86ac-11eb-928d-0086212ace13.png)
+![image](https://user-images.githubusercontent.com/67871528/111408976-75930b80-86ac-11eb-9028-69741ba1c3c6.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If a user creates an account manually or simply clicks the demo button to create a temporary account they will then have the option to view that users profile page displayed by the profile icon.
 
-### `npm run eject`
+![image](https://user-images.githubusercontent.com/67871528/111409165-cefb3a80-86ac-11eb-9194-ec607101c922.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A users profile page has menu options to show the user's account info and also to request a favor.  The profile page also lists any favors a user has accepted and chose to fulfill for others.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![image](https://user-images.githubusercontent.com/67871528/111409343-27323c80-86ad-11eb-860e-b496feccaef6.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Requesting a Favor
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If a user wants to view favors other users are currently requesting or fulfilling they have a couple of options.  You can go to the newsfeed and see a list of all favors being requested or accepted or you can click on a users username and see a list of all the favors they have requested or fulfilled.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/67871528/111409701-da029a80-86ad-11eb-88dc-06858c7f605b.png)
+![image](https://user-images.githubusercontent.com/67871528/111409719-e2f36c00-86ad-11eb-9fec-70b662b0f08b.png)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If a user wants to learn more about covid, deal with the stress of covid related issues or learn how to stop the spread then visiting the covid help page will be extremely helpful.   The covid help page has several slide shows informing CC users on how to handle covid related issues
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![image](https://user-images.githubusercontent.com/67871528/111410030-5dbc8700-86ae-11eb-94f4-c6317427c601.png)
 
-### Making a Progressive Web App
+![image](https://user-images.githubusercontent.com/67871528/111410054-690fb280-86ae-11eb-8c17-2f690d568cc0.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![image](https://user-images.githubusercontent.com/67871528/111410077-7331b100-86ae-11eb-8237-ab2d5a6f6101.png)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
